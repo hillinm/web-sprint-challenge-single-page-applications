@@ -1,10 +1,14 @@
 import React from "react";
+import { BrowserRouter as Router } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 
 const App = () => {
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+    <Header />
+    <Footer />
     </>
   );
 };
