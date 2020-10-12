@@ -122,6 +122,7 @@ export default function Form() {
           name="name"
           value={formState.name}
           onChange={inputChange}
+          data-cy="name"
         />
         {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
       </label>
@@ -133,6 +134,7 @@ export default function Form() {
           name="email"
           value={formState.email}
           onChange={inputChange}
+          data-cy="email"
         />
         {errors.email.length > 0 ? (
           <p className="error">{errors.email}</p>
@@ -251,12 +253,7 @@ export default function Form() {
             ) : null}
         </label>
         </div>
-      <div>
-      <button type="submit">
-        Submit
-      </button>
-      <pre>{JSON.stringify(post, null, 2)}</pre>
-      </div>
+
       <label htmlFor="specialinstructions">
         Special Instructions:
         <textarea
@@ -268,7 +265,13 @@ export default function Form() {
         {errors.specialinstructions.length > 0 ? (
           <p className="error">{errors.specialinstructions}</p>
         ) : null}
-      </label>            
+      </label>
+      <div>
+      <button type="submit" data-cy='submit'>
+        Submit
+      </button>
+      <pre>{JSON.stringify(post, null, 2)}</pre>
+      </div>            
     </form>
   );
 }
