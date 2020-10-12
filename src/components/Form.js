@@ -17,6 +17,7 @@ export default function Form() {
       pineapple: "",
       ham: "",
       onions: "",
+      specialinstructions: "",
     });
 
 // server error
@@ -31,6 +32,7 @@ export default function Form() {
     pineapple: "",
     ham: "",
     onions: "",
+    specialinstructions: "",
   });
 
   const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
@@ -72,6 +74,7 @@ export default function Form() {
         pineapple: "",
         ham: "",
         onions: "",
+        specialinstructions: "",
       });
     });
   };
@@ -98,6 +101,7 @@ export default function Form() {
     pineapple: yup.boolean(),
     ham: yup.boolean(),
     onions: yup.boolean(),
+    specialinstructions: yup.string(),
   });
 
   useEffect(() => {
@@ -253,7 +257,18 @@ export default function Form() {
       </button>
       <pre>{JSON.stringify(post, null, 2)}</pre>
       </div>
-
+      <label htmlFor="specialinstructions">
+        Why would you like to help?
+        <textarea
+          id="specialinstructions"
+          name="specialinstructions"
+          value={formState.specialinstructions}
+          onChange={inputChange}
+        />
+        {errors.specialinstructions.length > 0 ? (
+          <p className="error">{errors.specialinstructions}</p>
+        ) : null}
+      </label>            
     </form>
   );
 }
