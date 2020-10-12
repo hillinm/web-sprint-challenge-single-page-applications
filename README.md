@@ -57,22 +57,22 @@ It when you test your app or code by inputting all the selections, text boxes, i
 
 Your finished project must include all of the following requirements:
 
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
-- [ ] A form with a "/pizza" route
+- [X] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable)
+- [X] A form with a "/pizza" route
 - [X] A name text input field
 - [x] Validation for name - name must be at least 2 characters
 - [X] A dropdown for pizza size
 - [X] A checklist for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input for special instructions
+- [X] Text input for special instructions
 - [X] An Add to Order button that submits form and returns a database record of name, size, toppings and special instructions
 
 #### Testing MVP
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [X] test that you can add text to the box
+- [X] test that you can select multiple toppings
+- [X] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
