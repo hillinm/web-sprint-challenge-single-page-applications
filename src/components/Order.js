@@ -157,9 +157,8 @@ function Order() {
           <p className="error">{errors.size}</p>
         ) : null}
         </label>
-
-        <div className="toppings">
         <h1>Toppings</h1>
+        <div className="toppings">
         <label htmlFor="pepperoni" className="pepperoni">
             <input
             type="checkbox"
