@@ -9,6 +9,7 @@ export default function Form() {
     const [formState, setFormState] = useState({
       name: "",
       email: "",
+      size: "",
       pepperoni: "",
       mushroom: "",
       sausage: "",
@@ -22,6 +23,7 @@ export default function Form() {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
+    size: "",
     pepperoni: "",
     mushroom: "",
     sausage: "",
@@ -31,8 +33,7 @@ export default function Form() {
     onions: "",
   });
 
-    // control whether or not the form can be submitted if there are errors in form validation (in the useEffect)
-    const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
+  const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
 
     // managing state for errors. empty unless inline validation (validateInput) updates key/value pair to have error
   
@@ -63,6 +64,7 @@ export default function Form() {
       setFormState({
         name: "",
         email: "",
+        size: "",
         pepperoni: "",
         mushroom: "",
         sausage: "",
@@ -88,6 +90,7 @@ export default function Form() {
   const formSchema = yup.object().shape({
     name: yup.string().required("Name is required"),
     email: yup.string().email().required("Email is required"),
+    size: yup.string().required("Please Select Size"),
     pepperoni: yup.boolean(),
     mushroom: yup.boolean(),
     sausage: yup.boolean(),
@@ -132,6 +135,24 @@ export default function Form() {
         ) : null}
         </label>
         </div>
+        <label htmlFor="size">
+        What Size Pizza?
+        <select
+          id="size"
+          name="size"
+          value={formState.size}
+          onChange={inputChange}
+        >
+          <option>--Choose One--</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+        {errors.size.length > 0 ? (
+          <p className="error">{errors.size}</p>
+        ) : null}
+        </label>
+
         <div className="toppings">
         <h1>Toppings</h1>
         <label htmlFor="pepperoni" className="pepperoni">
