@@ -258,7 +258,7 @@ export default function Form() {
       <pre>{JSON.stringify(post, null, 2)}</pre>
       </div>
       <label htmlFor="specialinstructions">
-        Why would you like to help?
+        Special Instructions:
         <textarea
           id="specialinstructions"
           name="specialinstructions"
