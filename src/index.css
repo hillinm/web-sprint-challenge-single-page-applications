@@ -25,17 +25,23 @@ nav {
   margin-bottom: 32px;
   background-color: white;
 }
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
 
 .nav-links {
   display: flex;
   justify-content: space-between;
+  font-size: 30px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #1c5d76;
+  color: maroon;
   font-weight: bold;
   margin-right: 8px;
+  padding: 20px;
 }
 
 .nav-links a:last-of-type {
@@ -48,7 +54,7 @@ nav {
 
 .contact {
   align-items: center;
-  width: 300px;
+  width: 500px;
 }
 
 .navigation-bar {
@@ -75,11 +81,6 @@ html {
   font-size: 62.5%;
 }
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -95,6 +96,8 @@ label {
   margin: 10px 0;
   font-size: 2.4rem;
   font-family: 'Merriweather', serif;
+  color: white;
+  text-shadow: 3px 3px 5px maroon;
 }
 
 input,
@@ -172,4 +175,9 @@ h1{
   color: maroon;
   font-size: 3em;
   font-family: 'Merriweather', serif;
+}
+
+img {
+  border: 5px solid maroon;
+  box-shadow: 5px 5px 15px;
 }
