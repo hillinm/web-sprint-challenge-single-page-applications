@@ -34,7 +34,6 @@ function Order() {
     specialinstructions: "",
   });
 
-  const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
 
     // managing state for errors. empty unless inline validation (validateInput) updates key/value pair to have error
   
@@ -104,10 +103,7 @@ function Order() {
   });
 
   useEffect(() => {
-    formSchema.isValid(formState).then((valid) => {
-      console.log("is my form valid", valid);
-      setButtonIsDisabled(!valid);
-    });
+
   }, [formSchema, formState]);
   return (
     <form onSubmit={formSubmit}>
