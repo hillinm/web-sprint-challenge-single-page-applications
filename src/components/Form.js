@@ -3,12 +3,19 @@ import * as yup from "yup";
 import axios from "axios";
 
 
+
 export default function Form() {
     // managing state for our form inputs
     const [formState, setFormState] = useState({
       name: "",
       email: "",
       pepperoni: "",
+      mushroom: "",
+      sausage: "",
+      olives: "",
+      pineapple: "",
+      ham: "",
+      onions: "",
     });
 
 // server error
@@ -16,6 +23,12 @@ export default function Form() {
     name: "",
     email: "",
     pepperoni: "",
+    mushroom: "",
+    sausage: "",
+    olives: "",
+    pineapple: "",
+    ham: "",
+    onions: "",
   });
 
     // control whether or not the form can be submitted if there are errors in form validation (in the useEffect)
@@ -50,6 +63,7 @@ export default function Form() {
       setFormState({
         name: "",
         email: "",
+        pepperoni: "",
       });
     });
   };
@@ -68,7 +82,13 @@ export default function Form() {
   const formSchema = yup.object().shape({
     name: yup.string().required("Name is required"),
     email: yup.string().email().required("Email is required"),
-    pepperoni: yup.boolean().oneOf([true])
+    pepperoni: yup.boolean(),
+    mushroom: yup.boolean(),
+    sausage: yup.boolean(),
+    olives: yup.boolean(),
+    pineapple: yup.boolean(),
+    ham: yup.boolean(),
+    onions: yup.boolean(),
   });
 
   useEffect(() => {
@@ -79,6 +99,8 @@ export default function Form() {
   }, [formSchema, formState]);
   return (
     <form onSubmit={formSubmit}>
+    <div className="contact">
+    <h1>Contact Information</h1>
       <label htmlFor="name">
         Name
         <input
@@ -103,23 +125,43 @@ export default function Form() {
           <p className="error">{errors.email}</p>
         ) : null}
         </label>
+        </div>
+        <div className="toppings">
+        <h1>Toppings</h1>
         <label htmlFor="pepperoni" className="pepperoni">
-        <input
-          type="checkbox"
-          id="pepperoni"
-          name="pepperoni"
-          checked={formState.pepperoni}
-          onChange={inputChange}
-        />
-        Pepperoni
-        {errors.pepperoni.length > 0 ? (
-          <p className="error">{errors.pepperoni}</p>
-        ) : null}
-      </label>
+            <input
+            type="checkbox"
+            id="pepperoni"
+            name="pepperoni"
+            checked={formState.pepperoni}
+            onChange={inputChange}
+            />
+            Pepperoni
+            {errors.pepperoni.length > 0 ? (
+            <p className="error">{errors.pepperoni}</p>
+            ) : null}
+        </label>
+        <label htmlFor="mushroom" className="mushroom">
+            <input
+            type="checkbox"
+            id="mushroom"
+            name="mushroom"
+            checked={formState.mushroom}
+            onChange={inputChange}
+            />
+            Mushroom
+            {errors.mushroom.length > 0 ? (
+            <p className="error">{errors.mushroom}</p>
+            ) : null}
+        </label>
+        </div>
+      <div>
       <button type="submit" disabled={buttonIsDisabled}>
         Submit
       </button>
       <pre>{JSON.stringify(post, null, 2)}</pre>
+      </div>
+
     </form>
   );
 }

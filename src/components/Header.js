@@ -5,7 +5,7 @@ function Header() {
     return (
         <StyledHeader>
         <div class="navigation-bar">
-              <img src=".src/images/LambdaEatsLogo.jpg" alt="Logo" /> 
+              <img src="LambdaEatsLogo.jpg" alt="Logo" /> 
             <div class="navbar">
                 <a href="index.html">Order</a>
                 <a href="index.html">Home</a>
