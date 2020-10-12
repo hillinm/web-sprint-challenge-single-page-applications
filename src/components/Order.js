@@ -3,8 +3,7 @@ import * as yup from "yup";
 import axios from "axios";
 
 
-
-export default function Form() {
+function Order() {
     // managing state for our form inputs
     const [formState, setFormState] = useState({
       name: "",
@@ -275,3 +274,5 @@ export default function Form() {
     </form>
   );
 }
+
+export default Order;

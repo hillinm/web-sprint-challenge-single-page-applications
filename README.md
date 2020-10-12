@@ -32,11 +32,14 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
 
+Captures information about the current URL and path of the browser rendering that component. Useful for nested routing without having to re-calculate URLs manually. 
 
 1. How would you explain form validation to someone who has never programmed before?
+
 It's a way for the code to verify that what is being typed is exactly how the programmer wanted it formatted.
 
 1. In 1-2 sentences, define end to end testing.
+
 It when you test your app or code by inputting all the selections, text boxes, inputs, and submissions
 
 ## Instructions
