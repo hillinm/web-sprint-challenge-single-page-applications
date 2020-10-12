@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
     <Header />
-    <Router path="/pizza" >
+    <Router path="/ordered" >
     </Router>,
     <Form />
     <Footer />
