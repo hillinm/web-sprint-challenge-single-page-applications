@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Footer () {
     return (
         <StyledHeader>
-        <h2>Mark Hillin</h2>
+        <h2>Lambda Eats</h2>
         </StyledHeader>
     )
 }

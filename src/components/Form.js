@@ -64,6 +64,12 @@ export default function Form() {
         name: "",
         email: "",
         pepperoni: "",
+        mushroom: "",
+        sausage: "",
+        olives: "",
+        pineapple: "",
+        ham: "",
+        onions: "",
       });
     });
   };
@@ -154,9 +160,74 @@ export default function Form() {
             <p className="error">{errors.mushroom}</p>
             ) : null}
         </label>
+        <label htmlFor="sausage" className="sausage">
+            <input
+            type="checkbox"
+            id="sausage"
+            name="sausage"
+            checked={formState.sausage}
+            onChange={inputChange}
+            />
+            Sausage
+            {errors.sausage.length > 0 ? (
+            <p className="error">{errors.sausage}</p>
+            ) : null}
+        </label>        
+        <label htmlFor="olives" className="olives">
+            <input
+            type="checkbox"
+            id="olives"
+            name="olives"
+            checked={formState.olives}
+            onChange={inputChange}
+            />
+            Olives
+            {errors.olives.length > 0 ? (
+            <p className="error">{errors.olives}</p>
+            ) : null}
+        </label>
+        <label htmlFor="pineapple" className="pineapple" >
+            <input
+            type="checkbox"
+            id="pineapple"
+            name="pineapple"
+            checked={formState.pineapple}
+            onChange={inputChange}
+            />
+            Pineapple
+            {errors.pineapple.length > 0 ? (
+            <p className="error">{errors.pineapple}</p>
+            ) : null}
+        </label>
+        <label htmlFor="ham" className="ham">
+            <input
+            type="checkbox"
+            id="ham"
+            name="ham"
+            checked={formState.ham}
+            onChange={inputChange}
+            />
+            Ham
+            {errors.ham.length > 0 ? (
+            <p className="error">{errors.ham}</p>
+            ) : null}
+        </label>        
+        <label htmlFor="onions" className="onions">
+            <input
+            type="checkbox"
+            id="onions"
+            name="onions"
+            checked={formState.onions}
+            onChange={inputChange}
+            />
+            Onions
+            {errors.onions.length > 0 ? (
+            <p className="error">{errors.onions}</p>
+            ) : null}
+        </label>
         </div>
       <div>
-      <button type="submit" disabled={buttonIsDisabled}>
+      <button type="submit">
         Submit
       </button>
       <pre>{JSON.stringify(post, null, 2)}</pre>

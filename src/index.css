@@ -18,8 +18,8 @@ html, body{
 }
 
 .contact {
-  margin-left: 25%;
   align-items: center;
+  width: 300px;
 }
 
 .navigation-bar {
@@ -33,7 +33,7 @@ html, body{
   color: white;
   justify-content: space-around;
   padding: 10px;
-  font-size: 150%;
+  font-size: 200%;
 }
 .navigation-bar img{
   float: left;
@@ -55,7 +55,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 90%;
-  max-width: 300px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -64,7 +64,8 @@ label {
   flex-direction: column;
   align-items: flex-start;
   margin: 10px 0;
-  font-size: 1.4rem;
+  font-size: 2.4rem;
+  font-family: 'Merriweather', serif;
 }
 
 input,
@@ -81,6 +82,7 @@ textarea {
   font-size: 1.4rem;
   letter-spacing: 0.5px;
   background-color: white;
+  font-family: 'Merriweather', serif;
 }
 select {
   height: 40px;
@@ -137,13 +139,7 @@ button:disabled {
   color: red;
 }
 
-.terms {
-  display: inline-block;
-  align-self: self-start;
-}
-
-.terms input {
-  width: 15px;
-  display: inline-block;
-  margin-right: 5px;
+h1{
+  font-size: 3em;
+  font-family: 'Merriweather', serif;
 }
